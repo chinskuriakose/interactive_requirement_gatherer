@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How to fill requirements?</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/style.css">
+    <style>
+        div {
+            width: 60%;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="top">Documentation</h2>
+    <hr>
+    <img src="../images/vpc.png" style="width: 100px; float: inline-end;" alt="vpc image">
+    <h3 id="vpc" class="service_name">VPC</h3> 
+    <ul style="list-style-type:square;">
+        <li class="parameter_name">CidrBlock
+            <ul style="list-style-type: circle;">
+                <li class="parameter_prop"><b>Description</b> - The IPv4 network range for the VPC, in CIDR notation. For example, 10.0.0.0/16. We modify the specified CIDR block to its canonical form; for example, if you specify 100.68.0.18/18, we modify it to 100.68.0.0/18.</li>
+                <li class="parameter_prop"><b>Required</b> - No</li>
+                <li class="parameter_prop"><b>Options</b> - Yes/No </li>
+            </ul>
+        </li>
+        <li class="parameter_name">EnableDnsHostnames
+            <ul style="list-style-type: circle;">
+                <li class="parameter_prop"><b>Description</b> - Indicates whether the instances launched in the VPC get DNS hostnames. If enabled, instances in the VPC get DNS hostnames; otherwise, they do not. Disabled by default for nondefault VPCs. You can only enable DNS hostnames if you've enabled DNS support.</li>
+                <li class="parameter_prop"><b>Required</b> - No</li>
+                <li class="parameter_prop"><b>Options</b> - Yes/No </li>
+            </ul>
+        </li>
+        <li class="parameter_name">EnableDnsSupport
+            <ul style="list-style-type: circle;">
+                <li class="parameter_prop"><b>Description</b> - Indicates whether the DNS resolution is supported for the VPC. If enabled, queries to the Amazon provided DNS server at the 169.254.169.253 IP address, or the reserved IP address at the base of the VPC network range "plus two" succeed. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled. Enabled by default.</li>
+                <li class="parameter_prop"><b>Required</b> - No</li>
+                <li class="parameter_prop"><b>Options</b> - Yes/No </li>
+            </ul>
+        </li>
+        <li class="parameter_name">InstanceTenancy
+            <ul style="list-style-type: circle;">
+                <li class="parameter_prop"><b>Description</b> - The allowed tenancy of instances launched into the VPC.</li>
+                <li class="parameter_prop"><b>Required</b> - No</li>
+                <li class="parameter_prop"><b>Type</b> - String </li>
+                <li class="parameter_prop"><b>Options</b> 
+                    <br>&ensp;- dedicated: An instance launched into the VPC runs on dedicated hardware by default, unless you explicitly specify a tenancy of host during instance launch. You cannot specify a tenancy of default during instance launch.
+                    <br>&ensp;- default: An instance launched into the VPC runs on shared hardware by default, unless you explicitly specify a different tenancy during instance launch.
+                    <br>&ensp;- host </li>
+            </ul>
+        </li>
+        <li class="parameter_name">Ipv4IpamPoolId
+            <ul style="list-style-type: circle;">
+                <li class="parameter_prop"><b>Description</b> - The ID of an IPv4 IPAM pool you want to use for allocating this VPC's CIDR.</li>
+                <li class="parameter_prop"><b>Required</b> - Conditional - You must specify either CidrBlock or Ipv4IpamPoolId.</li>
+                <li class="parameter_prop"><b>Type</b> - String </li>
+            </ul>
+        </li>
+        <li class="parameter_name">Ipv4NetmaskLength
+            <ul style="list-style-type: circle;">
+                <li class="parameter_prop"><b>Description</b> - The netmask length of the IPv4 CIDR you want to allocate to this VPC from an Amazon VPC IP Address Manager (IPAM) pool.</li>
+                <li class="parameter_prop"><b>Required</b> - No</li>
+                <li class="parameter_prop"><b>Type</b> - Integer </li>
+            </ul>
+        </li>
+        <li class="parameter_name">Tags
+            <ul style="list-style-type: circle;">
+                <li class="parameter_prop"><b>Description</b> - The tags for the VPC.</li>
+                <li class="parameter_prop"><b>Required</b> - No</li>
+                <li class="parameter_prop"><b>Type</b> - List of Tags </li>
+            </ul>
+        </li>
+    </ul>
+    <a href="./index.html">Home</a>
+    <a href="#top">Back to top</a>
+</body>
+</html>

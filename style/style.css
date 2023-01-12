@@ -1,0 +1,36 @@
+h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.service_name {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.parameter_name {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.parameter_prop {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+}
+
+.bottom_link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+a:hover {
+    background-color:rgb(112, 201, 179) ;
+}
+
+a:active {
+    font-weight: bold;    
+}
+
+input:focus {
+    font-weight: bold;    
+    background-color: darkgrey;
+}
